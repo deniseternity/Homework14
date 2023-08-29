@@ -27,7 +27,7 @@ public class Hogwarts {
     }
 
     public int getTransgration() {
-        return transgration
+        return transgration;
     }
 
     @Override

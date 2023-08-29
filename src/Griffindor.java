@@ -10,6 +10,21 @@ public class Griffindor extends Hogwarts{
         this.honestly = honestly;
     }
 
+    private int sumFeatures() {
+        return this.nobleness + this.honor + this.bravery;
+    }
+    public void compare(Griffindor griffindor) {
+
+        if (this.sumFeatures() > griffindor.sumFeatures()) {
+            public void compare(Griffindor griffindor) {
+                if (bravery + royal + honestly > griffindor.getBravery() + griffindor.getHonestly() + griffindor.getRoyal()) {
+                    System.out.println(name + " сильнее " + griffindor.name);
+                } else {
+                    System.out.println(griffindor.name + " сильнее " + name);
+                }
+            }
+        }
+
     public void compare(Griffindor griffindor) {
         if (bravery + royal + honestly > griffindor.getBravery() + griffindor.getHonestly() + griffindor.getRoyal()) {
             System.out.println(name + " сильнее " + griffindor.name);
@@ -32,12 +47,13 @@ public class Griffindor extends Hogwarts{
 
     @Override
         public String toString() {
+
             return "Griffindor{" +
                     "bravery=" + bravery +
                     ", royal=" + royal +
                     ", honestly=" + honestly +
-                    ", power=" + power +
-                    ", transgration=" + transgration +
+                    super.toString() +
                     '}';
+        }
         }
     }
