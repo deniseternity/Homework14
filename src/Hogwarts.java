@@ -1,4 +1,4 @@
-public class Hogwarts {
+public abstract class Hogwarts {
 
     protected String name;
     protected int power;
