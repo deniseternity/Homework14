@@ -1,8 +1,8 @@
 public abstract class Hogwarts {
 
-    protected String name;
-    protected int power;
-    protected int transgration;
+    private String name;
+    private int power;
+    private int transgration;
 
     public Hogwarts(String name, int power, int transgration) {
         this.name = name;
