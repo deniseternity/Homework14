@@ -4,9 +4,6 @@ public class Ravenclow extends Hogwarts {
     private int wise;
     private int witty;
     private int fullOfCreativity;
-    private int name;
-    private int power;
-    private int transgration;
 
     public Ravenclow(String name, int power, int transgration, int smart, int wise, int witty, int fullOfCreativity) {
         this.smart = smart;
@@ -25,18 +22,6 @@ public class Ravenclow extends Hogwarts {
         } else {
             System.out.println(ravenclow.name + " сильнее " + name);
         }
-    }
-
-    public int getName() {
-        return name;
-    }
-
-    public int getPower() {
-        return power;
-    }
-
-    public int getTransgration() {
-        return transgration;
     }
 
     public String toString() {

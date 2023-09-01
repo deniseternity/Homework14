@@ -3,8 +3,6 @@ class Puffindui extends Hogwarts {
     private int loyal;
     private int honest;
     private int witchcraft;
-    private int name;
-    private int transgression;
 
     public Puffindui(String fullName, int witchcraft, int transgression, int hardworking, int loyal, int honest) {
         super(fullName, witchcraft, transgression);
@@ -29,30 +27,23 @@ class Puffindui extends Hogwarts {
         return witchcraft;
     }
 
-    public int getFullName() {
-        return name;
-    }
+    public static void studentComparison(Puffindui student) {
+        int sum1 = this.getHardworking() + this.getHonest() + this.getLoyal();
+        int sum2 = student.getHardworking() + student.getHonest() + student.getLoyal();
 
-    public int getTransgression() {
-        return transgression;
-    }
-
-    public static void studentComparison(Puffindui student1, Puffindui student2) {
-        int sum1 = student1.getHardworking() + student1.getHonest() + student1.getLoyal();
-        int sum2 = student2.getHardworking() + student2.getHonest() + student2.getLoyal();
         if (sum1 > sum2) {
-            System.out.println("Студент " + student1.getFullName() +
-                    " лучше, чем " + student2.getFullName());
+            System.out.println("Студент " + this.getFullName() +
+                    " лучше, чем " + student.getFullName());
         } else {
-            System.out.println("Студент " + student2.getFullName() +
-                    " лучше, чем " + student1.getFullName());
+            System.out.println("Студент " + student.getFullName() +
+                    " лучше, чем " + this.getFullName());
         }
+
     }
 
     @Override
     public String toString() {
-        System.out.println("Имя - " + getFullName() + ", witchcraft " + getWitchcraft() +
-                ", transgression " + getTransgression() + ", hardworking " + getHardworking() + ", loyal " +
-                getLoyal() + ", honest " + getHonest());
+        return super.toString() + ", witchcraft " + getWitchcraft() + ", hardworking "
+                + getHardworking() + ", loyal " + getLoyal() + ", honest " + getHonest());
     }
 }

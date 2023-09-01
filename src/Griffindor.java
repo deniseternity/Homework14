@@ -4,9 +4,6 @@ public class Griffindor extends Hogwarts{
     private int honestly;
     private int nobleness;
     private int honor;
-    private int name;
-    private int power;
-    private int transgration;
 
     public Griffindor(int power, int transgration, int bravery, int royal, int honestly) {
         super(power, transgration);

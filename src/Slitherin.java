@@ -5,8 +5,6 @@ class Slytherin extends Hogwarts {
     private int loyalty;
     private int bravery;
     private int witchcraft;
-    private int transgression;
-    private int name;
     private int sumFeatures;
 
     public Slytherin(String fullName, int witchcraft, int transgression, int force, int intelligence, int dexterity, int loyalty, int bravery,) {
@@ -50,32 +48,23 @@ class Slytherin extends Hogwarts {
         return bravery;
     }
 
-    public int getFullName() {
-        return name;
-    }
-
     public int getWitchcraft() {
         return witchcraft;
     }
 
-    public int getTransgression() {
-        return transgression;
-    }
-
-    public void peopleComparison(Slytherin people1, Slytherin people2) {
+    public void peopleComparison(Slytherin people) {
         int total1 = this.sumFeatures();
-        int total2 = people1.sumFeatures();
+        int total2 = people.sumFeatures();
         if (total1 > total2) {
-            System.out.println("Студент " + people1.getFullName() + " лучше, чем " + people2.getFullName());
+            System.out.println("Студент " + this.getFullName() + " лучше, чем " + people.getFullName());
         } else {
-            System.out.println("Студент " + people2.getFullName() + " лучше, чем " + people1.getFullName());
+            System.out.println("Студент " + people.getFullName() + " лучше, чем " + this.getFullName());
         }
     }
 
     @Override
     public String toString()() {
-        System.out.println("Имя - " + getFullName() + ", witchcraft " + getWitchcraft() + ", transgression "
-                + getTransgression() + ", force " + getForce() + ", dexterity " + getDexterity()
+        return super.toString() + ", witchcraft " + getWitchcraft() + ", force " + getForce() + ", dexterity " + getDexterity()
                 + ", intelligence " + getIntelligence() + ", loyalty " + getLoyalty() + ", bravery " + getBravery());
     }
 }
